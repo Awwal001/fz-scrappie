@@ -14,7 +14,7 @@ export const listLinks = (fomattedLink) => async (dispatch) => {
         })
 
         const { data } = await axios.post(
-            '/api_generate/',
+            'https://fz-scrappie.herokuapp.com/api_generate/',
             {'movie_to_download': "https://fzmovies.net/"+fomattedLink }
 
         )

@@ -20,7 +20,7 @@ from django.http import HttpResponse
 
 
 #Exceptions error 500 , 503 , Backend Error
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def home (request):
     all_texts = ''
     perf_links = ''
