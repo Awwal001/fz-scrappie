@@ -14,7 +14,7 @@ export const findMovies = (searchword) => async (dispatch) => {
         })
 
         const { data } = await axios.post(
-            '/api_find/',
+            'https://fz-scrappie.herokuapp.com/api_find/',
             {'searchword': searchword}
         )
 

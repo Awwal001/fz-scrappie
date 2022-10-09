@@ -20,7 +20,6 @@ def home (request):
     all_texts = ''
     perf_links = ''
 
-    print(perf_links)
     if request.method == "POST":
         searchword = request.POST.get('searchword')
         br.open("https://www.fzmovies.net/")
