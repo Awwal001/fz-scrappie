@@ -1,8 +1,11 @@
 from rest_framework.decorators import api_view
 from rest_framework import status
+from django.shortcuts import render
 from . forms import Search
 import mechanize
+import requests
 import urllib
+import re
 import mechanize
 from bs4 import BeautifulSoup
 from rest_framework.response import Response

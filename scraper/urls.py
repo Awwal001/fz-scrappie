@@ -1,11 +1,11 @@
-# from django.urls import path
+from django.urls import path
 
-# from . import views
+from . import views
 
-# app_name='scraper'
+app_name='scraper'
 
-# urlpatterns = [
-#     path('', views.home, name='index'),
-#     path('generate/', views.generate_download_link, name='generate'),
-# ]
+urlpatterns = [
+    path('/home', views.home, name='home'),
+    path('generate/', views.generate_download_link, name='generate'),
+]
 
