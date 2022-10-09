@@ -1,0 +1,170 @@
+.App {
+  text-align: center;
+  
+}
+
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.portfolio__item {
+  padding: 1.3rem;
+  border-radius: 2rem;
+  transition: #5403691f;
+}
+
+.portfolio__item:hover {
+  background: #5403691f;
+  border: solid 1px #4502555a;
+}
+
+.portfolio__item-image {
+  overflow: hidden;
+  height: 75%;
+}
+
+
+
+.portfolio__item p {
+  font-size: 0.9rem;
+}
+
+.portfolio__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: rem; 
+}
+
+.portfolio__item-content {
+  height: 50%;
+}
+
+@media screen and (max-width: 1024px){
+  .portfolio__container {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .portfolio__container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+}
+
+
+  
+.card{
+  
+  border: none;
+  background-color: #5e1f6ea7;
+  background-image: url(../src/assets/bg-texture.png);
+}
+.search {
+  width: 100%;
+  margin-bottom: auto;
+  margin-top: 20px;
+  height: 50px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top: 5px;
+  caret-color: transparent;
+  line-height: 20px;
+  transition: width 0.4s linear
+}
+
+.search .search-input {
+  padding: 0 10px;
+  width: 100%;
+  caret-color: #536bf6;
+  font-size: 19px;
+  font-weight: 300;
+  color: black;
+  transition: width 0.4s linear;
+}
+
+
+.search-icon {
+  height: 34px;
+  width: 34px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #470d56e6;
+  font-size: 10px;
+  bottom: 30px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.search-icon:hover{
+
+  background-color: #55036955 !important;
+}
+
+a:link {
+  text-decoration: none
+}
+
+.btns{
+  color: #470d56e6;
+  background-color: #fff;
+  border: solid 0px #fff;
+}
+
+.link{
+  color: #470d56e6;
+  font-size: 20px;
+}
+.link:hover{
+
+  color: #55036955 !important;
+}
+
+
+.card-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  border:none;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+
+.card-inner:hover{
+
+  transform: scale(1.1);
+
+}
+
+.mg-text span{
+
+  font-size: 12px;
+
+}
+
+.mg-text{
+
+  line-height: 14px;
+}
