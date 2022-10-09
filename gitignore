@@ -26,7 +26,7 @@ db.sqlite3-journal
 .vscode/
 # Distribution / packaging
 .Python
-build/
+
 develop-eggs/
 dist/
 downloads/
@@ -80,12 +80,7 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
-doc/_build/
 
-# PyBuilder
-target/
 
 # Jupyter Notebook
 .ipynb_checkpoints

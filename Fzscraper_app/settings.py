@@ -13,7 +13,7 @@ SECRET_KEY = '3fysodf=@u+c8a=9#hq#&4zo1#o_m!ba+dgquar7+ci4u1_8ls'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['scrappie.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['fz-scrappie.herokuapp.com','127.0.0.1']
 
 
 # Application definition
