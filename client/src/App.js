@@ -17,56 +17,21 @@ function App() {
   const { linkerror, linksloading, links } = linkList
 
   const [ searchword, setsearchword ] = useState("");
+  const [message, setMessage] = useState('')
 
   const searchMovie = async(e) => {
     e.preventDefault();
     dispatch(findMovies(searchword));
+    if(movies.length === 0) {
+      setMessage('No movie found')
+    }
   }
-  console.log(movies);
 
   const generateLinks = async(link) => {
     const fomattedLink = link.replace(/ /g,"%20");
     dispatch(listLinks(fomattedLink));
     
   }
-
-  // const [ searchword, setsearchword ] = useState("");
-  // const url = "http://127.0.0.1:8000/api_find/"
-  // const url2 = "http://127.0.0.1:8000/api_generate/"
-
-
-  // const [movies, setMovies] = useState({});
-  // const [ links, setLinks ] = useState([]);
-
-  // const searchMovie = async(e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const { data } =  await axios.post(url, {searchword: searchword});
-
-  //     setMovies(data);
-  //   } catch (error) {
-  //     console.log(error.response);
-  //   }
-  // }
-  // console.log(movies.data);
-
-  // const generateLinks = async(link) => {
-  //   const fomattedLink = link.replace(/ /g,"%20");
-  //   try {
-  //     const { data } = await axios.post(url2, {movie_to_download: "https://fzmovies.net/"+fomattedLink });
-  //     console.log(fomattedLink);
-  //     setLinks(data);
-      
-  //   } catch (error) {
-  //     console.log(error.response);
-  //   }
-  // }
-  // console.log(links)
-  
-  // link = "movie-The Dictator--hmp4.htm" movie-Salt--hmp4.htm
-  
-  // def to_and(value):           ------->>>>>>>> to JS
-  //   return value.replace(" ","%20")
 
   return (
     <div className="App" >
@@ -86,6 +51,8 @@ function App() {
         </div> 
       </div>
       <br/>
+      {movies.length !== 0 && !loading &&<h5 >Search Result</h5>}
+      {message && !loading && movies.length === 0 && <Message variant='danger'>{message}</Message>}
       {loading ?<Loader /> : error ? <Message variant='danger'>{error}</Message> : (
         <div className="container portfolio__container">
           {movies.map((movie) => (
